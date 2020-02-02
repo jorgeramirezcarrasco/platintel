@@ -1,7 +1,7 @@
 Docker commands
 
 docker build -f ./Dockerfile -t platintel .
-docker run -p 3000:3000 platintel:latest
+docker run -p 3000:3000 --env-file ./server/.env platintel:latest
 
 
 Heroku Docker
