@@ -10,4 +10,4 @@ heroku login
 docker ps
 heroku container:login
 heroku container:push web -a platintel
-heroku container:release web
+heroku container:release web -a platintel
