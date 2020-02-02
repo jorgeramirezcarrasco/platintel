@@ -1,0 +1,13 @@
+{
+    "name": "platintel",
+    "version": "1.0.0",
+    "description": "",
+    "author": "jrc",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server/server.js"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    }
+}
