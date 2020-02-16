@@ -13,6 +13,7 @@ am4core.ready(function () {
 
 
     networkSeries.dataFields.value = "value";
+    networkSeries.dataFields.linkWith = "linkWith";
     networkSeries.dataFields.name = "name";
     networkSeries.dataFields.children = "children";
     networkSeries.dataFields.collapsed = "collapsed";
