@@ -16,12 +16,12 @@ am4core.ready(function () {
     networkSeries.dataFields.linkWith = "linkWith";
     networkSeries.dataFields.name = "name";
     networkSeries.dataFields.children = "children";
+    networkSeries.dataFields.id = "name";
     networkSeries.dataFields.collapsed = "collapsed";
 
     networkSeries.nodes.template.tooltipText = "{name}";
     networkSeries.nodes.template.fillOpacity = 1;
-    networkSeries.manyBodyStrength = -20;
-    networkSeries.links.template.strength = 0.8;
+    networkSeries.linkWithStrength = 0;
     networkSeries.minRadius = am4core.percent(2);
     networkSeries.nodes.template.events.on("hit", function (ev) {
         if (ev.target.dataItem.name.includes("twitter")) {
@@ -32,4 +32,24 @@ am4core.ready(function () {
     networkSeries.nodes.template.label.text = "{name}"
     networkSeries.fontSize = 10;
 
-}); // end am4core.ready()
+    var linkTemplate = networkSeries.links.template;
+    linkTemplate.strokeWidth = 1;
+    var linkHoverState = linkTemplate.states.create("hover");
+    linkHoverState.properties.strokeOpacity = 1;
+    linkHoverState.properties.strokeWidth = 2;
+
+    nodeTemplate.events.on("over", function (event) {
+        var dataItem = event.target.dataItem;
+        dataItem.childLinks.each(function (link) {
+            link.isHover = true;
+        })
+    })
+
+    nodeTemplate.events.on("out", function (event) {
+        var dataItem = event.target.dataItem;
+        dataItem.childLinks.each(function (link) {
+            link.isHover = false;
+        })
+    })
+
+});
