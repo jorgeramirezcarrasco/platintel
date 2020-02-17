@@ -16,16 +16,17 @@ am4core.ready(function () {
     networkSeries.dataFields.linkWith = "linkWith";
     networkSeries.dataFields.name = "name";
     networkSeries.dataFields.children = "children";
-    networkSeries.dataFields.id = "name";
+    networkSeries.dataFields.id = "id";
     networkSeries.dataFields.collapsed = "collapsed";
+    networkSeries.dataFields.color = "type";
 
     networkSeries.nodes.template.tooltipText = "{name}";
     networkSeries.nodes.template.fillOpacity = 1;
     networkSeries.linkWithStrength = 0;
     networkSeries.minRadius = am4core.percent(2);
     networkSeries.nodes.template.events.on("hit", function (ev) {
-        if (ev.target.dataItem.name.includes("twitter")) {
-            window.open("https://" + ev.target.dataItem.name, '_blank');
+        if (ev.target.dataItem.id.includes("twitter")) {
+            window.open("https://" + ev.target.dataItem.id, '_blank');
         }
     });
 
@@ -38,18 +39,5 @@ am4core.ready(function () {
     linkHoverState.properties.strokeOpacity = 1;
     linkHoverState.properties.strokeWidth = 2;
 
-    nodeTemplate.events.on("over", function (event) {
-        var dataItem = event.target.dataItem;
-        dataItem.childLinks.each(function (link) {
-            link.isHover = true;
-        })
-    })
-
-    nodeTemplate.events.on("out", function (event) {
-        var dataItem = event.target.dataItem;
-        dataItem.childLinks.each(function (link) {
-            link.isHover = false;
-        })
-    })
 
 });
