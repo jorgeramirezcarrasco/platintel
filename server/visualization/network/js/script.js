@@ -5,7 +5,7 @@ am4core.ready(function () {
     // Themes end
 
     var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
-    chart.legend = new am4charts.Legend();
+    //chart.legend = new am4charts.Legend();
     var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
     chart.dataSource.url = "/data";
     chart.dataSource.parser = new am4core.JSONParser();
