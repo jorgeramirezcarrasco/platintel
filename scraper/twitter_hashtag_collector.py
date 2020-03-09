@@ -204,7 +204,8 @@ def getHashtagTimeline(twitter_hashtag):
     last_tweet_id = 0
     count_tweets = 20
 
-    while(has_more_items):
+    # while (has_more_items):
+    while ((has_more_items) & (count_tweets < 1000)):
         print(count_tweets)
     # while ((has_more_items) & (last_tweet_timestamp>min_timestamp)):
         headers = {
