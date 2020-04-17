@@ -30,6 +30,22 @@ def clean_text(x):
     return words
 
 
+def check_attack(tweet, attacks):
+    """Function to check if the tweet is an attack
+
+    Arguments:
+        tweet {list} -- list of words in tweet
+        attacks {list} -- list of attack items
+
+    Returns:
+        boolean -- True if it is an attack else False
+    """
+    for term in attacks:
+        if term in tweet:
+            return True
+    return False
+
+
 def transform_date(x):
     """Function to transform a date
 

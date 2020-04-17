@@ -5,7 +5,7 @@ import json
 import pandas as pd
 import pymongo
 
-from utils import clean_text, get_hashtags_operations, transform_date, read_from_env_file
+from utils import clean_text, get_hashtags_operations, transform_date, read_from_env_file, check_attack
 
 directory = '../scraper/'
 data_files = []
@@ -29,8 +29,7 @@ df['hashtags'] = df['text'].map(lambda x: get_hashtags_operations(x))
 
 terms_attacks = json_file_item["attacks"]
 
-df['attack'] = df['clean_text'].map(lambda x: True if len(
-    [term for term in terms_attacks if term in x]) > 0 else False)
+df['attack'] = df['clean_text'].map(lambda x: check_attack(x, terms_attacks))
 df['operations'] = df['hashtags'].map(lambda x: True if len(
     [hashtag for hashtag in x if '#op' == hashtag[:3]]) > 0 else False)
 df['RT'] = df['clean_text'].map(lambda x: True if 'rt' in x else False)
