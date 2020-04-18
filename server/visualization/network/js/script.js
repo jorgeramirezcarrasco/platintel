@@ -22,14 +22,19 @@ am4core.ready(function () {
 
     networkSeries.nodes.template.tooltipText = "{name}";
     networkSeries.nodes.template.fillOpacity = 1;
-    networkSeries.linkWithStrength = 0;
-    networkSeries.minRadius = am4core.percent(2);
+    networkSeries.linkWithStrength = 0.2;
+    networkSeries.minRadius = am4core.percent(1.5);
     networkSeries.nodes.template.events.on("hit", function (ev) {
         if (ev.target.dataItem.id.includes("twitter")) {
             window.open("https://" + ev.target.dataItem.id, '_blank');
         }
     });
-
+    networkSeries.events.on("inited", function () {
+        networkSeries.animate({
+            property: "velocityDecay",
+            to: 1
+        }, 30000);
+    });
     networkSeries.nodes.template.label.text = "{name}"
     networkSeries.fontSize = 10;
 
