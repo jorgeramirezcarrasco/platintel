@@ -133,7 +133,13 @@ def filter_anon_username(username):
         for term in json_file_item["username"]:
             if term.lower() in username.lower():
                 return 1
-        return 0
+    with open('../artifacts/anon_dict.json') as json_file:
+        json_file_item = json.load(json_file)
+        for group in json_file_item["groups"]:
+            for user in json_file_item["groups"][group]:
+                if user.lower() in username.lower():
+                    return 1
+    return 0
 
 
 def filter_anon_hashtag(hashtag, search_term):

@@ -16,7 +16,7 @@ def clean_text(x):
     Returns:
         list -- list of cleaned words
     """
-    tokens = x.split(" ")
+    tokens = str(x).split(" ")
     # convert to lower case
     tokens = [w.lower() for w in tokens]
     # remove punctuation from each word

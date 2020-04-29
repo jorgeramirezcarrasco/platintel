@@ -10,7 +10,7 @@ from utils import clean_text, get_hashtags_operations, transform_date, read_from
 directory = '../scraper/'
 data_files = []
 json_file_item = None
-with open('../artifacts/parser_anon_filter.json') as json_file:
+with open('../artifacts/anon_dict.json') as json_file:
     json_file_item = json.load(json_file)
 
 for file in os.listdir(directory):
@@ -72,6 +72,16 @@ for index, row in df[(df['attack'] == True) & (df['RT'] == False) & (df['operati
         dict_output[row['user']] = []
         dict_output[row['user']].append(
             {"id": row['link_tweet'], "name": "Attack", "value": "", "type": json_colors_item["Attack"]})
+
+for index, row in df[(df['attack'] == True) & (df['RT'] == True)].iterrows():
+    if row['user'] in list_users:
+        dict_output[row['user']].append(
+            {"id": row['link_tweet'], "name": "RT of Attack", "value": "", "type": json_colors_item["RT of Attack"]})
+    else:
+        list_users.append(row['user'])
+        dict_output[row['user']] = []
+        dict_output[row['user']].append(
+            {"id": row['link_tweet'], "name": "RT of Attack", "value": "", "type": json_colors_item["RT of Attack"]})
 
 dict_output_formatted = []
 for elem in dict_output:
