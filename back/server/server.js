@@ -7,7 +7,7 @@ const users = require("./routes/api/users");
 const analysis = require("./routes/api/analysis");
 const cors = require("cors");
 
-var origin = "https://platintel.herokuapp.com";
+var origin = process.env.ORIGIN;
 
 app.use(cors({ credentials: true, origin: origin }));
 
