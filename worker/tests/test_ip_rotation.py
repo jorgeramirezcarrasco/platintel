@@ -1,5 +1,5 @@
 import unittest
-from scraper.rotate_ip import get_proxies
+from scraper.utils import get_proxies
 
 
 class TestIpRotation(unittest.TestCase):
