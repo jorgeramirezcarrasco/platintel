@@ -21,6 +21,10 @@
     "Tango down",
     "DDoS attack",
     "attack",
+    "destroyed by",
+    "owned by",
+    "droped by",
+    "Vazamentos de dados by",
     ["op", "pastebin"],
     ["targets"],
     ["hacked"],
@@ -90,7 +94,7 @@
     ["op", "site"],
     ["pastebin", "tango", "down"],
     "powned",
-    ["rooted", "pastebin"]
+    ["rooted", "pastebin", "Downed by", "Target"]
   ],
   "groups": {
     "CyberTeamGlobal": [
@@ -124,7 +128,10 @@
       "@b2llz",
       "@H0pperI",
       "@str1zr",
-      "@4rmyD4rk"
+      "@4rmyD4rk",
+      "@OfflineTheGod",
+      "@PowerfulArmyGR",
+      "@DroogXk"
     ],
     "LizardSquad": [
       "@Hipnotic1337",
@@ -133,7 +140,9 @@
       "@UGLegion",
       "@lizard_backup",
       "@alg0dLS",
-      "@ryanjunior377"
+      "@ryanjunior377",
+      "@FUCKCRUCIFFIXX",
+      "@LizardSquad2020"
     ],
     "Chronosteam": [
       "@chronnosteam",
@@ -172,7 +181,8 @@
       "@unlulzable",
       "@Lulzsec_argen",
       "@GOB4R",
-      "@raflyghost"
+      "@raflyghost",
+      "@LuIzSecu"
     ],
     "Cyberpunk": ["@_Bx1_", "@NyuSecurity"],
     "GhostSquadHack": [
@@ -254,7 +264,10 @@
       "@namatikure",
       "@OBM81",
       "@azmyoel",
-      "@HackDown2"
+      "@HackDown2",
+      "@th3n3sk",
+      "@Anonsargentina1",
+      "@haxxpost"
     ],
     "Anonymous": [
       "@YourNewsAnonLat",
@@ -312,7 +325,8 @@
       "@YourAnonNewsBR",
       "@Anon_ITA",
       "@nonymousglobal",
-      "@Anon1moNICA"
+      "@Anon1moNICA",
+      "@LancelotUdrich"
     ]
   }
 }

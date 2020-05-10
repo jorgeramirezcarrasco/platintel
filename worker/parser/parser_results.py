@@ -5,7 +5,7 @@ import json
 import pandas as pd
 import pymongo
 
-from utils import clean_text, get_hashtags_operations, transform_date, read_from_env_file, check_attack
+from utils import clean_text, get_hashtags_operations, transform_date, read_from_env_file, check_attack, transform_user_rt_to_tweet, transform_text_rt_to_tweet
 
 directory = '../scraper/'
 data_files = []
@@ -37,6 +37,13 @@ df['operations'] = df['hashtags'].map(lambda x: True if len(
     [hashtag for hashtag in x if '#op' == hashtag[:3]]) > 0 else False)
 df['RT'] = df['clean_text'].map(lambda x: True if 'rt' in x else False)
 
+# Translate RTs to Attacks
+df['user'] = df[(df['RT'] == True)]['text'].apply(
+    lambda x: transform_user_rt_to_tweet(x))
+df['text'] = df[(df['RT'] == True)]['text'].apply(
+    lambda x: transform_text_rt_to_tweet(x))
+df['RT'] = False
+df = df.drop_duplicates(subset=['user', 'text'])
 
 df_top_hashtags = df[(df['operations'] ==
                       True) & (df['RT'] ==
@@ -104,9 +111,9 @@ for elem in json_file_item['groups']:
 # Upload to database
 env_vars = read_from_env_file()
 myclient = pymongo.MongoClient(env_vars["MONGO_URL"]+"?retryWrites=false")
-mydb = myclient["heroku_pgn7kt6n"]
+mydb = myclient["heroku_l7w1n51h"]
 mycoll = mydb["analyses"]
-#mycoll.delete_one({"user": "Test"})
+mycoll.delete_one({"user": "5e519f9c7c213e67373e1f14"})
 mydict = {"user": "5e519f9c7c213e67373e1f14",
           "analysis": analysis, "data": dict_output_formatted}
 mycoll.insert_one(mydict)

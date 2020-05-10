@@ -63,6 +63,39 @@ def transform_date(x):
     return date
 
 
+def transform_user_rt_to_tweet(x):
+    """Function to transform text from RTs to Tweets
+
+    Arguments:
+        x {str} -- input text
+
+    Returns:
+        str -- text processed
+    """
+    try:
+        user_text = x.split(": ")[0]
+        user_text = user_text.split("RT ")[1]
+    except:
+        user_text = ''
+    return user_text
+
+
+def transform_text_rt_to_tweet(x):
+    """Function to transform text from RTs to Tweets
+
+    Arguments:
+        x {str} -- input text
+
+    Returns:
+        str -- text processed
+    """
+    try:
+        tweet_text = x.split(": ")[1]
+    except:
+        tweet_text = x
+    return tweet_text
+
+
 def get_hashtags_operations(x):
     """Function to extract the hashtag from the text
 
