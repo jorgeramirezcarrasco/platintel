@@ -3,29 +3,32 @@ import { Link } from "react-router-dom";
 import LayersIcon from "@material-ui/icons/Layers";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
+import OpenSelect from "./Selection";
+
 class Navbar extends Component {
   onLogoutClick = (e) => {
     e.preventDefault();
     this.props.logoutUser();
-    console.log(this.props.auth.isAuthenticated);
   };
   renderAuthenticatedUser() {
     if (this.props.auth.isAuthenticated) {
       return (
-        <button
-          style={{
-            width: "150px",
-            borderRadius: "3px",
-            letterSpacing: "1.5px",
-            marginTop: "1rem",
-            position: "absolute",
-            right: "10px",
-          }}
-          onClick={this.onLogoutClick}
-          className="btn  waves-effect waves-light hoverable grey"
-        >
-          Logout
-        </button>
+        <div>
+          <button
+            style={{
+              width: "10%",
+              borderRadius: "3px",
+              letterSpacing: "1.5px",
+              position: "absolute",
+              right: "10px",
+            }}
+            onClick={this.onLogoutClick}
+            className="btn  waves-effect waves-light hoverable blue accent-3"
+          >
+            Logout
+          </button>
+          <OpenSelect />
+        </div>
       );
     }
   }

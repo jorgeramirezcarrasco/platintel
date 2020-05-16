@@ -113,7 +113,8 @@ env_vars = read_from_env_file()
 myclient = pymongo.MongoClient(env_vars["MONGO_URL"]+"?retryWrites=false")
 mydb = myclient["heroku_l7w1n51h"]
 mycoll = mydb["analyses"]
-mycoll.delete_one({"user": "5e519f9c7c213e67373e1f14"})
+analysis_formatted = "#"+analysis.split("_")[1]+"_"+analysis.split("_")[2]
+#mycoll.delete_one({"user": "5e519f9c7c213e67373e1f14"})
 mydict = {"user": "5e519f9c7c213e67373e1f14",
-          "analysis": analysis, "data": dict_output_formatted}
+          "analysis": analysis_formatted, "data": dict_output_formatted}
 mycoll.insert_one(mydict)

@@ -50,7 +50,7 @@ class Login extends Component {
           <div className="col s8 offset-s2">
             <Link
               to="/"
-              className="btn waves-effect waves-light hoverable grey"
+              className="btn waves-effect waves-light hoverable blue accent-3"
             >
               Back to home
             </Link>
@@ -105,7 +105,7 @@ class Login extends Component {
                     marginTop: "1rem",
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable grey"
+                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                 >
                   Login
                 </button>

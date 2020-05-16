@@ -3,8 +3,11 @@ import setAuthToken from "../utils/setAuthToken";
 import jwt_decode from "jwt-decode";
 import { GET_ERRORS, SET_CURRENT_USER, USER_LOADING } from "./types"; // Register User
 export const registerUser = (userData, history) => (dispatch) => {
+  const API_ENDPOINT =
+    process.env.REACT_APP_API_ENDPOINT ||
+    "https://platintel-back.herokuapp.com";
   axios
-    .post("https://platintel-back.herokuapp.com/api/users/register", userData)
+    .post(API_ENDPOINT + "/api/users/register", userData)
     .then((res) => history.push("/login")) // re-direct to login on successful register
     .catch((err) =>
       dispatch({
@@ -14,8 +17,11 @@ export const registerUser = (userData, history) => (dispatch) => {
     );
 }; // Login - get user token
 export const loginUser = (userData) => (dispatch) => {
+  const API_ENDPOINT =
+    process.env.REACT_APP_API_ENDPOINT ||
+    "https://platintel-back.herokuapp.com";
   axios
-    .post("https://platintel-back.herokuapp.com/api/users/login", userData)
+    .post(API_ENDPOINT + "/api/users/login", userData)
     .then((res) => {
       // Save to localStorage// Set token to localStorage
       const { token } = res.data;

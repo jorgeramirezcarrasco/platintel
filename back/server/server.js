@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const passport = require("passport");
 const users = require("./routes/api/users");
-const analysis = require("./routes/api/analysis");
+const analyses = require("./routes/api/analyses");
 const cors = require("cors");
 
 var origin = process.env.ORIGIN;
@@ -32,7 +32,7 @@ app.use("/api/users", users);
 app.use(
   "/api/analyses",
   passport.authenticate("jwt", { session: false }),
-  analysis
+  analyses
 );
 
 app.listen(process.env.PORT || 8000);

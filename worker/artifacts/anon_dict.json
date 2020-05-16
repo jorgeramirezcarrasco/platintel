@@ -25,6 +25,11 @@
     "owned by",
     "droped by",
     "Vazamentos de dados by",
+    "Downed by",
+    "#hackeado",
+    "VAZAMENTO de dados do",
+    "ATENÇAO:",
+
     ["op", "pastebin"],
     ["targets"],
     ["hacked"],
@@ -131,7 +136,9 @@
       "@4rmyD4rk",
       "@OfflineTheGod",
       "@PowerfulArmyGR",
-      "@DroogXk"
+      "@DroogXk",
+      "@777_inside",
+      "@s4r4d0x"
     ],
     "LizardSquad": [
       "@Hipnotic1337",
@@ -182,7 +189,8 @@
       "@Lulzsec_argen",
       "@GOB4R",
       "@raflyghost",
-      "@LuIzSecu"
+      "@LuIzSecu",
+      "@MrVveb"
     ],
     "Cyberpunk": ["@_Bx1_", "@NyuSecurity"],
     "GhostSquadHack": [
@@ -193,7 +201,8 @@
       "@gh0575p3c706",
       "@HaxStroke",
       "@Scode404",
-      "@Mamba3306"
+      "@Mamba3306",
+      "@raflyghost"
     ],
     "NewSecTeam": [
       "@NewSecGroup",
@@ -210,7 +219,10 @@
       "@hebr0nzzz",
       "@LabDefCon",
       "@d3m0ns4d",
-      "@RussianSec12"
+      "@RussianSec12",
+      "@Purpl3P",
+      "@chaos_unix",
+      "@1nv1s1bl3_ofc"
     ],
     "Sophia Hacker Group Member": [
       "@m4gr1nh0x",
@@ -267,7 +279,13 @@
       "@HackDown2",
       "@th3n3sk",
       "@Anonsargentina1",
-      "@haxxpost"
+      "@haxxpost",
+      "@SamotUserr",
+      "@Virus_A_2020",
+      "@LancelotUdrich",
+      "@Ndon_isBack",
+      "@anonIeaks",
+      "@WhoniX1337"
     ],
     "Anonymous": [
       "@YourNewsAnonLat",
