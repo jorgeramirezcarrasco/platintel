@@ -99,7 +99,44 @@
     ["op", "site"],
     ["pastebin", "tango", "down"],
     "powned",
-    ["rooted", "pastebin", "Downed by", "Target"]
+    ["rooted", "pastebin", "Downed by", "Target"],
+    "Data leaked",
+
+    "Server Pawned",
+
+    "pwd by",
+
+    "Hackeado por",
+
+    "powned by",
+
+    "pown3d",
+
+    "pwnz",
+
+    "Servidor do",
+    "hackeado",
+
+    "Out of service",
+
+    "Down",
+    "website",
+
+    "Pwd:",
+    "mirror",
+
+    "Pwd:",
+    "zone-h.org",
+
+    "#hackeado",
+
+    "Vazamento de dados do",
+
+    "ATENÇAO",
+
+    "Avanço no",
+
+    "system hijacked"
   ],
   "groups": {
     "CyberTeamGlobal": [
@@ -138,7 +175,8 @@
       "@PowerfulArmyGR",
       "@DroogXk",
       "@777_inside",
-      "@s4r4d0x"
+      "@s4r4d0x",
+      "@synchr0n1ze"
     ],
     "LizardSquad": [
       "@Hipnotic1337",
@@ -149,7 +187,9 @@
       "@alg0dLS",
       "@ryanjunior377",
       "@FUCKCRUCIFFIXX",
-      "@LizardSquad2020"
+      "@LizardSquad2020",
+      "@LizardLulz_",
+      "@zvlivx_dotsh"
     ],
     "Chronosteam": [
       "@chronnosteam",
@@ -159,7 +199,8 @@
       "@atem1s",
       "@0x5365657079",
       "@Ferdysimofs",
-      "@1xThaw"
+      "@1xThaw",
+      "@akanah_"
     ],
     "Ghost": ["@AnonGhostPT", "@crypt_ghost", "@raflyghost", "@Adnnoir"],
     "LulzSec": [
@@ -190,7 +231,9 @@
       "@GOB4R",
       "@raflyghost",
       "@LuIzSecu",
-      "@MrVveb"
+      "@MrVveb",
+      "@N3Mk1ng",
+      "@Sie7ePe"
     ],
     "Cyberpunk": ["@_Bx1_", "@NyuSecurity"],
     "GhostSquadHack": [
@@ -202,7 +245,14 @@
       "@HaxStroke",
       "@Scode404",
       "@Mamba3306",
-      "@raflyghost"
+      "@raflyghost",
+      "@ElixirOP",
+      "@44dhi",
+      "@5H311_1NJ3C706",
+      "@coi0te",
+      "@ARZ3L1",
+      "@YourAnonS0u1",
+      "@Apex_Haxor"
     ],
     "NewSecTeam": [
       "@NewSecGroup",
@@ -222,13 +272,21 @@
       "@RussianSec12",
       "@Purpl3P",
       "@chaos_unix",
-      "@1nv1s1bl3_ofc"
+      "@1nv1s1bl3_ofc",
+      "@dz3rk3nj1",
+      "@k4v3r1nh4",
+      "@W0rldBrasil",
+      "@LabDefCon",
+      "@sin1pecrew",
+      "@Crystal_MSF",
+      "@Kr1pt0n4"
     ],
     "Sophia Hacker Group Member": [
       "@m4gr1nh0x",
       "@cr1m3agency",
       "@Mr_Her0in",
-      "@mtz_treze"
+      "@mtz_treze",
+      "@b2llz"
     ],
     "Anon": [
       "@W0LfSh4d0w",
@@ -285,7 +343,25 @@
       "@LancelotUdrich",
       "@Ndon_isBack",
       "@anonIeaks",
-      "@WhoniX1337"
+      "@WhoniX1337",
+      "@x4Anon",
+      "@dcode__",
+      "@knight_0black0",
+      "@d4s7r3v",
+      "@Im_laynux",
+      "@shiny_golden",
+      "@tit4n1999",
+      "@0x_R1skm",
+      "@LiteMods",
+      "@AnonOpUSA",
+      "@AnonOpsLatino",
+      "@AnonsOperations",
+      "@ZELADORANONIMO",
+      "@MRX36765116",
+      "@Annonnymous_R",
+      "@anonspmdz",
+      "@YourAnonColo",
+      "@sh4d_0w"
     ],
     "Anonymous": [
       "@YourNewsAnonLat",
@@ -344,7 +420,12 @@
       "@Anon_ITA",
       "@nonymousglobal",
       "@Anon1moNICA",
-      "@LancelotUdrich"
+      "@LancelotUdrich",
+      "@Anoony332",
+      "@AnonymousGuat",
+      "@NoAnonymousNews",
+      "@ESYourAnonymous",
+      "@AnonGilet2"
     ]
   }
 }
