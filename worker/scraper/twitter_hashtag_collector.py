@@ -84,7 +84,5 @@ def getHashtagTimeline(twitter_hashtag, tweets_dict, users_dict):
             time.sleep(0.1)
     except Exception as e:
         print(e)
-        tweets_dict = {}
-        users_dict = {}
 
     return tweets_dict, users_dict

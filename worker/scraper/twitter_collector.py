@@ -74,15 +74,16 @@ def collect(term):
             hashtag, tweets_dict, users_dict)
         users_df = pd.DataFrame(users_dict)
         users_anon_df = users_df
-        users_anon_df['anon'] = users_df['username'].apply(
-            lambda x: filter_anon_username(x))
-        users_anon_df = users_anon_df.drop_duplicates(subset='username')
-        users_anon_df = users_anon_df.loc[users_anon_df['anon'] == 1, ]
-        for index, row in users_anon_df.iterrows():
-            if row['username'] not in users_visited:
-                tweets_dict = getTimelineUser(
-                    str(row['username'][1:]), tweets_dict)
-                time.sleep(2)
+        if 'username' in list(users_df.columns):
+            users_anon_df['anon'] = users_df['username'].apply(
+                lambda x: filter_anon_username(x))
+            users_anon_df = users_anon_df.drop_duplicates(subset='username')
+            users_anon_df = users_anon_df.loc[users_anon_df['anon'] == 1, ]
+            for index, row in users_anon_df.iterrows():
+                if row['username'] not in users_visited:
+                    tweets_dict = getTimelineUser(
+                        str(row['username'][1:]), tweets_dict)
+                    time.sleep(2)
 
     # Store final results
     tweets_df = pd.DataFrame(tweets_dict)
