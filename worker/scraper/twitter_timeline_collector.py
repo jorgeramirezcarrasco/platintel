@@ -6,7 +6,7 @@ from twython import Twython, TwythonError
 from utils import read_from_env_file
 
 
-def getTimelineUser(user_name, tweets_dict):
+def get_timeline_user(user_name, tweets_dict):
     """Function to obain the user timeline from Twitter API
 
     Arguments:

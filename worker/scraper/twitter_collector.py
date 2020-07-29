@@ -16,8 +16,8 @@ import pandas as pd
 import requests
 from nltk.corpus import stopwords
 
-from twitter_hashtag_collector import getHashtagTimeline
-from twitter_timeline_collector import getTimelineUser
+from twitter_hashtag_collector import get_hashtag_timeline
+from twitter_timeline_collector import get_timeline_user
 from utils import (clean_text, create_dict_from_structure, filter_anon_hashtag,
                    filter_anon_username, get_hashtags_operations)
 
@@ -31,7 +31,8 @@ def collect(term):
     tweets_dict = create_dict_from_structure('tweets_hashtag')
     users_dict = create_dict_from_structure('users_hashtag')
 
-    tweets_dict, users_dict = getHashtagTimeline(term, tweets_dict, users_dict)
+    tweets_dict, users_dict = get_hashtag_timeline(
+        term, tweets_dict, users_dict)
 
     users_df = pd.DataFrame(users_dict)
 
@@ -42,7 +43,7 @@ def collect(term):
     users_anon_df = users_anon_df.drop_duplicates(subset='username')
     users_visited = []
     for index, row in users_anon_df.iterrows():
-        tweets_dict = getTimelineUser(str(row['username'][1:]), tweets_dict)
+        tweets_dict = get_timeline_user(str(row['username'][1:]), tweets_dict)
         users_visited.append(row['username'])
         time.sleep(2)
 
@@ -70,7 +71,7 @@ def collect(term):
     for hashtag in hashtags:
         print(hashtag)
         hashtag = hashtag[1:]
-        tweets_dict, users_dict = getHashtagTimeline(
+        tweets_dict, users_dict = get_hashtag_timeline(
             hashtag, tweets_dict, users_dict)
         users_df = pd.DataFrame(users_dict)
         users_anon_df = users_df
@@ -81,7 +82,7 @@ def collect(term):
             users_anon_df = users_anon_df.loc[users_anon_df['anon'] == 1, ]
             for index, row in users_anon_df.iterrows():
                 if row['username'] not in users_visited:
-                    tweets_dict = getTimelineUser(
+                    tweets_dict = get_timeline_user(
                         str(row['username'][1:]), tweets_dict)
                     time.sleep(2)
 

@@ -14,7 +14,7 @@ from utils_beautiful_soup import (
     bs_twitter_tweets_retweets_extractor_iterator)
 
 
-def getHashtagTimeline(twitter_hashtag, tweets_dict, users_dict):
+def get_hashtag_timeline(twitter_hashtag, tweets_dict, users_dict):
     """Function to obain the hashtag timeline from Twitter
 
     Arguments:
