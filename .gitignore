@@ -30,4 +30,5 @@ __pycache__
 .env
 *.zip
 /venv
+anon_dict.json
 
