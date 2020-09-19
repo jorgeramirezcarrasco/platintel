@@ -120,7 +120,7 @@ def create_dict_from_structure(key):
 
 
 def filter_anon_username(username):
-    """Function to filter anonymous user from dict
+    """Function to filter user from dict
 
     Arguments:
         username {str} -- Username to filter
@@ -143,7 +143,7 @@ def filter_anon_username(username):
 
 
 def filter_anon_hashtag(hashtag, search_term):
-    """Function to filter anonymous hashtag from dict
+    """Function to filter hashtag from dict
 
     Arguments:
         hashtag {str} -- hashtag to filter
