@@ -31,4 +31,5 @@ __pycache__
 *.zip
 /venv
 anon_dict.json
+scraper_anon_filter.json
 
